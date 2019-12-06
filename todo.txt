@@ -1,0 +1,21 @@
+Test task for Python (Django) Developer
+
+Scraping part:
+We need to parse the data about Iphones from https://www.citrus.ua/
+We need to parse items with price below 25000 UAH from this category https://www.citrus.ua/noutbuki-i-ultrabuki/
+You need to save:
+- Links to photos
+- Price
+- Cashback sum
+- Tech characteristics
+- Full Description in HTML
+- Link to the item
+You need to save the data to PostgreSQL DB.
+
+Will be a plus:
+1. API:
+- You need to create simple API endpoint in Django that will return list of items with pagination.
+- User can filter items via price, cashback, main tech characteristics.
+2. Project deliverables:
+- Gitlab/Github repository with the working code
+- The readme file that describes how to run the project
