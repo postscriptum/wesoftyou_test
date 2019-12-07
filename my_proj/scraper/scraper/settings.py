@@ -9,6 +9,15 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
+import sys
+import os
+import django
+
+sys.path.append('/home/dima/Work/wesoftyou_test/my_proj')
+os.environ['DJANGO_SETTINGS_MODULE'] = 'my_proj.settings'
+django.setup()
+
+
 BOT_NAME = 'scraper'
 
 SPIDER_MODULES = ['scraper.spiders']
@@ -64,9 +73,9 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'scraper.pipelines.ScraperPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'scraper.pipelines.ScraperPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
