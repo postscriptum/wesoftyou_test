@@ -13,7 +13,8 @@ import sys
 import os
 import django
 
-sys.path.append('/home/dima/Work/wesoftyou_test/my_proj')
+PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+sys.path.append(PROJECT_DIR)
 os.environ['DJANGO_SETTINGS_MODULE'] = 'my_proj.settings'
 django.setup()
 
